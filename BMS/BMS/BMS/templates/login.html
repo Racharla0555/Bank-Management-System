@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/7b1e7ae05f.js" crossorigin="anonymous"></script>
+      <title>Login</title>
+
+
+      <style>
+        .bg-container{
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #ffffff;
+        }
+        .container-2{
+            background-color: #83bbf2;
+            padding: 18px;
+            width: 300px;
+            min-width: 500px;
+            border-radius: 24px;
+        }
+        h1{
+            color: #ffffff;
+            font-weight: bolder;
+            font-family: "Roboto";
+            text-align: center;
+        }
+        label{
+            color: #ffffff;
+        }
+        .button-container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 12px;
+        }
+        .button{
+            padding-top: 12px;
+            padding-bottom: 12px;
+            width: 120px;
+            padding-left: 24px;
+            padding-right: 24px;
+            border: 1px solid #ffffff;
+            border-radius: 12px;
+            text-align: center;
+            color: #ffffff;
+            background-color: transparent;
+        }
+        .image{
+            width: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container-1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (orientation: portrait) {
+            body {
+                display: none;
+            }
+        }
+      </style>
+
+    </head>
+    <body>
+        <div class="bg-container">
+            <div class="container-1">
+                <img class="image" src="https://res.cloudinary.com/djovsq3xl/image/upload/v1669970846/isometric-data-protection-concept-with-parent-child-login-window-lock-3d_1284-63713_lkz6ig.jpg"/>
+            </div>
+            <div class="container">
+                <div class="shadow-lg container-2">
+                    <h1>SBA Login</h1>
+                    <form method="post" >
+                        {% csrf_token %}
+                        <label for="accnumber">Email Address:</label>
+                        <input type="Email" class="form-control" name="email" id="accnumber" placeholder="Enter your Email Address"/>
+                        <label for="accloginpin" class="mt-3">Login Pin:</label>
+                        <input type="password" class="form-control" name="pin" id="accloginpin" placeholder="Enter 4 digit login pin"/>
+                        <div class="button-container">
+                            <button type="submit" class="button">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>

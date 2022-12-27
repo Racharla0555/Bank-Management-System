@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/7b1e7ae05f.js" crossorigin="anonymous"></script>
+      <title>Create Account</title>
+
+      
+      <style>
+        .bgcontainer{
+            display: flex;
+            flex-direction: row;
+            background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
+            height: 100%;
+            background-size: cover;
+            width: 100%;
+        }
+        form{
+            background-color: #ffffff;
+            width: 100%;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-right: 28px;
+        }
+        label{
+            padding-right: 12px;
+        }
+        .inputcontainer{
+            display: flex;
+            flex-direction: row;
+            margin: 8px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            flex-grow: 1;
+            padding-bottom: 80px;
+        }
+        h1{
+            font-family: "Roboto";
+            font-weight: bolder;
+            color: #ffffff;
+        }
+        
+        .image-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-left: 0px;
+        }
+        .button{
+            border: 1px solid #000000;
+            background-color: transparent;
+            padding: 14px;
+            border-radius: 19px;
+        }
+        @media (orientation: portrait) {
+            body {
+                display: none;
+            }
+        }
+      </style>
+      <!-- <script>
+      </script> -->
+    </head>
+    <body>
+        <div class="bgcontainer">
+            <div class="image-container w-30 mr-2">
+                <img class="image" src="https://res.cloudinary.com/djovsq3xl/image/upload/v1669988208/smiling-confident-businesswoman-posing-with-arms-folded_1262-20950-removebg-preview_awdijo_lvrrol.png"/>
+            </div>
+            <div class="container  w-70">
+                <h1 class="pt-3">Create Account</h1>
+                {%for i in messages%}
+                {{i}}
+                {%endfor%}
+                <form method="post" >
+                    {% csrf_token %}
+                    <div class="w-100 inputcontainer">
+                        <label for="accName" class="w-25">Name:</label>
+                        <input type="text" id="accName" name="name" class="form-control w-75"/>
+                    </div>
+                    <div class="w-100 inputcontainer">
+                        <label for="accphone" class="w-25">Phone Number:</label>
+                        <input type="tel" id="accphone" name="number" class="form-control w-75"/>
+                    </div>
+                    <div class="w-100 inputcontainer">
+                        <label for="accemail" class="w-25">Email:</label>
+                        <input type="email" id="accemail" name="email" class="form-control w-75"/>
+                    </div>
+                    <div class="w-100 inputcontainer">
+                        <label for="accType" class="w-25">Account Type:</label>
+                        <select id="accType" name="type" class="form-control w-75">
+                            <option>Savings</option>
+                            <option>Current</option>
+                        </select>
+                    </div>
+                    <div class="w-100 inputcontainer">
+                        <label for="accbalance" class="w-25">Deposit:</label>
+                        <input type="number" id="accbalance" name="balance" class="form-control w-75"/>
+                    </div>
+                    <div class="w-100 inputcontainer">
+                        <p>(Minimun Balance <b><i>Savings A/C</i>: 3000 <i>Current A/C:</i> 1000</b>)</p>
+                    </div>
+                    <div class="w-100 inputcontainer">
+                        <label for="accpin" class="w-25">Set a Login pin:</label>
+                        <input type="password" id="accpin" name=password1 class="form-control w-75"/>
+                    </div>
+                    <div class="w-100 inputcontainer">
+                        <label for="accpin" class="w-25">confirm Login pin:</label>
+                        <input type="password" id="accpin" name="password" class="form-control w-75"/>
+                    </div>
+                    
+                    <div class="button-container text-right pt-2 pb-2">
+                        <button type="submit" class="button">Create Account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

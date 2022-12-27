@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7b1e7ae05f.js" crossorigin="anonymous"></script>
+
+
+    <style>
+        .bg-color {
+        background: #000000;
+        width: 100%;
+        background-size: cover;
+    }
+
+        .contact-us-main-heading{
+            color: #ffffff;
+            overflow-y: hidden;
+        }
+        .submit-button {
+            background-color: #000000;
+            color: White;
+            border: 2px solid #ffffff;
+            height: 50px;
+            width: 120px;
+            border-radius: 12px;
+        }
+        .icons{
+            color: #ffffff;
+            font-size: 50px;
+        }
+        .icons-heading{
+            color: #ffffff;
+            font-weight: bolder;
+            font-size: 48px;
+        }
+        .icons-align{
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="pt-1 pb-5 bg-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="m-5 order-lg-1 order-md-2">
+                        <h1 class="ml-3 contact-us-main-heading">FILL THIS SHORT FORM,</h1>
+                        <h1 class="ml-3 contact-us-main-heading">WE WILL CALL YOU RIGHT AWAY</h1>
+                        <form style="margin-top: 30px;" id="myForm">
+                            <input type="text" class="form-control m-3" placeholder="Name" style="color: #000000; font-weight: bold;" id="nameInput" />
+                            <p id="nameError" class="required ml-3"></p>
+                            <input type="email" class="form-control m-3" placeholder="Email" style="color: #000000; font-weight: bold;" id="mailInput" />
+                            <p id="mailError" class="required ml-3"></p>
+                            <input type="tel" class="form-control m-3" placeholder="Phone Number" style="color: #000000; font-weight: bold;" id="numberInput" />
+                            <p id="numberError" class="required ml-3"></p>
+                            <textarea cols="50" rows="5" class="form-control m-3" placeholder="Any Questions?" style="color: #000000; font-weight: bold;" id="questionsInput"></textarea>
+                            <div class="text-right mt-4">
+                                <button class="ml-3 submit-button" id="submitButton" type="submit">Submit</button>
+                            </div>
+                            <p id="submission" class="required ml-3" style="font-size: 30px;"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 ml-5">
+                    <h1 class="icons-heading">Share It On</h1>
+                </div>
+                <div class="icons-align ml-5 d-block text-center d-flex flex-row ">
+                    <div class="text-center m-3">
+                        <i class="fab fa-twitter icons" ></i>
+                    </div>
+                    <div class="text-center m-3">
+                        <i class="fab fa-instagram icons"></i>
+                    </div>
+                    <div class="text-center m-3">
+                        <i class="fab fa-whatsapp icons"></i>
+                    </div>
+                    <div class="text-center m-3">
+                        <i class="fab fa-facebook icons"></i>
+                    </div>
+                    <div class="text-center m-3">
+                        <i class="fab fa-linkedin icons"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>
